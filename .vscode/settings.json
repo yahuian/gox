@@ -1,6 +1,11 @@
 {
   "cSpell.words": [
+    "Errorf",
+    "errorx",
     "filex",
     "yahuian"
+  ],
+  "go.testFlags": [
+    "-trimpath"
   ]
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-go test ./... -race -cover -failfast
+go test ./... -race -cover -trimpath -failfast
 
 golangci-lint run

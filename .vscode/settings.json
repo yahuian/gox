@@ -3,6 +3,7 @@
     "Errorf",
     "errorx",
     "filex",
+    "slicex",
     "yahuian"
   ],
   "go.testFlags": [

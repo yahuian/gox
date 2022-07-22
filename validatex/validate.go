@@ -95,6 +95,14 @@ func Struct(s any) error {
 	return nil
 }
 
+func Val(s any, name, tag string) error {
+	err := instance.validate.Var(s, tag)
+	if err != nil {
+		return errors.New(name + pretty(instance.translator, err))
+	}
+	return nil
+}
+
 func pretty(t ut.Translator, err error) string {
 	errorsMap, ok := err.(validator.ValidationErrors) //nolint:errorlint
 	if !ok {

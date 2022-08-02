@@ -26,3 +26,29 @@ func Contain[T comparable](list []T, key T) bool {
 	}
 	return false
 }
+
+func Map[T any, U any](list []T, f func(index int, value T) U) []U {
+	res := make([]U, 0, len(list))
+	for i, v := range list {
+		res = append(res, f(i, v))
+	}
+	return res
+}
+
+func Filter[T any](list []T, f func(index int, value T) bool) []T {
+	res := make([]T, 0)
+	for i, v := range list {
+		if f(i, v) {
+			res = append(res, v)
+		}
+	}
+	return res
+}
+
+func Reduce[T any](list []T, initial T, f func(index int, result, value T) T) T {
+	res := initial
+	for i, v := range list {
+		res = f(i, res, v)
+	}
+	return res
+}

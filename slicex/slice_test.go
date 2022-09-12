@@ -62,3 +62,34 @@ func TestMapFilterReduce(t *testing.T) {
 		t.Errorf("want %+v get %+v", 7, reduceRes)
 	}
 }
+
+func TestReverse(t *testing.T) {
+	type Case struct {
+		List []int
+		Want []int
+	}
+	cases := []Case{
+		{
+			List: []int{},
+			Want: []int{},
+		},
+		{
+			List: []int{1},
+			Want: []int{1},
+		},
+		{
+			List: []int{1, 2},
+			Want: []int{2, 1},
+		},
+		{
+			List: []int{1, 2, 3},
+			Want: []int{3, 2, 1},
+		},
+	}
+	for i, v := range cases {
+		slicex.Reverse(cases[i].List)
+		if !reflect.DeepEqual(v.Want, cases[i].List) {
+			t.Errorf("want %+v get %+v", v.Want, cases[i].List)
+		}
+	}
+}

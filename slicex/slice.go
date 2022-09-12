@@ -52,3 +52,9 @@ func Reduce[T any](list []T, initial T, f func(index int, result, value T) T) T 
 	}
 	return res
 }
+
+func Reverse[T any](list []T) {
+	for i, j := 0, len(list)-1; i < j; i, j = i+1, j-1 {
+		list[i], list[j] = list[j], list[i]
+	}
+}

@@ -1,22 +1,8 @@
 {
   "cSpell.words": [
-    "Debugf",
-    "Errorf",
-    "errorlint",
-    "errorx",
     "filex",
-    "gonic",
-    "Infof",
-    "loggerx",
-    "logx",
-    "nolint",
     "slicex",
-    "Syncer",
-    "Syncers",
-    "validatex",
-    "Warnf",
     "yahuian",
-    "zapcore"
   ],
   "go.testFlags": [
     "-trimpath"

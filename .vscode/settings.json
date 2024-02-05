@@ -1,8 +1,9 @@
 {
   "cSpell.words": [
     "filex",
+    "randx",
     "slicex",
-    "yahuian",
+    "yahuian"
   ],
   "go.testFlags": [
     "-trimpath"

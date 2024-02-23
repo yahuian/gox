@@ -3,6 +3,7 @@
     "filex",
     "randx",
     "slicex",
+    "stringx",
     "yahuian"
   ],
   "go.testFlags": [
